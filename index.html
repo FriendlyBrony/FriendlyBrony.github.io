@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>FriendlyBrony</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body scroll="custom">
+<center>
+   <div class="about">
+       <h1 id="nicknameAbout">FriendlyBrony</h1>
+       <hr color="greenyellow">
+        <h4>Web Designer | PHP Coder | C# Coder | Lua Coder</h4>
+        <p>I'm Eugene. 14y.o web disgner from Russia.<br>
+           Making open-source things on php|c#|lua</p>
+        <h3>Links</h3>
+        <a href="https://github.com/FriendlyBrony" target="_blank"><i class="fab fa-github fa-2x"></i></a><a href="https://vk.com/frbrofficial" target="_blank"><i class="fab fa-vk fa-2x"></i></a><a href="https://steamcommunity.com/id/frbroff/" target="_blank"><i class="fab fa-steam fa-2x"></i></a>
+        
+   </div>
+    <div class="main">
+        <h1 id="nickname">FriendlyBrony</h1>
+    </div>
+</center>
+<h1 class="info">Press to enter</h1><video id="background" src="clip.mp4" loop muted></video>
+<script>
+    $('.main').fadeOut(0);
+    $('#background').click(function() {
+        $('#background').get(0).play();
+        $('#background').get(0).muted = false;
+        $('#background').get(0).volume = 0.1;
+        $('.info').fadeOut(100);
+        $('.main').fadeIn(500);
+    });
+    $('#nickname').click(function() {
+        $('#nickname').fadeOut(100);
+        $('.about').addClass('shown');
+    });
+    $('#nicknameAbout').click(function() {
+        $('.about').removeClass('shown');
+        $('#nickname').delay(500).fadeIn(100);
+    });
+</script>
+</body>
+</html>
